@@ -29,6 +29,7 @@ testing_subject = fread("../UCI HAR Dataset/test/subject_test.txt", header=FALSE
 
 mydata <- c("training_subject", "training_x", "training_y", "testing_subject", "testing_x", "testing_y")
 sapply(mydata, data.table)
+
 ##
 ##
 ##
