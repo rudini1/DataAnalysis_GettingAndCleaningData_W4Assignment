@@ -12,7 +12,7 @@ if (!file.exists(filename)){
       download.file(fileURL, filename)
 }  
 if (!file.exists("../UCI HAR Dataset")) { 
-      unzip(filename) 
+      unzip(filename, exdir = "../") 
 }
 ## List all files
 allfiles<- list.files("../UCI HAR Dataset" ,recursive = TRUE)
@@ -27,9 +27,12 @@ testing_x = fread("../UCI HAR Dataset/test/X_test.txt", header=FALSE)
 testing_y = fread("../UCI HAR Dataset/test/Y_test.txt", header=FALSE)
 testing_subject = fread("../UCI HAR Dataset/test/subject_test.txt", header=FALSE)
 
-mydata <- c("training_subject", "training_x", "training_y", "testing_subject", "testing_x", "testing_y")
-sapply(mydata, data.table)
+activity_labels = fread("../UCI HAR Dataset/activity_labels.txt", header=FALSE)
 
-##
-##
-##
+## convert data frames into the faster data tables
+# not needed for fread
+# mydata <- c("training_subject", "training_x", "training_y", "testing_subject", "testing_x", "testing_y")
+# sapply(mydata, data.table)
+
+
+## Done importing

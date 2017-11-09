@@ -1,9 +1,16 @@
+---
+title: "run_analysis"
+output: github_document
+---
 # preliminaries
+
+`
       library(reshape2)
       library(data.table)
       library(dplyr)
+`
       
-# download files and load all into R. (prepares the raw data)
+      # download files and load all into R. (prepares the raw data)
       # source("./ImportScript.R") # alternatively outsource the data loading to a separate script
       
 # 1 Merge the training and the test sets to create one data set
