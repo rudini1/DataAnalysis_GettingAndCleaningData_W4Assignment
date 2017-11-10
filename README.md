@@ -1,6 +1,3 @@
----
-output: html_document
----
 DataAnalysis_GettingAndCleaningData_W4Assignment
 ==================================================
 Author: rudini1 
